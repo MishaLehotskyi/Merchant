@@ -108,8 +108,8 @@ async function runWalletBot(privateKey) {
   const wallet = new ethers.Wallet(privateKey, provider);
   console.log(`🚀 Старт торговли для: ${wallet.address}`);
 
-  const total = +(Math.random() * 20 + 30).toFixed(2);
-  const parts = Math.floor(Math.random() * 6 + 5);
+  const total = +(Math.random() * 20 + 50).toFixed(2);
+  const parts = Math.floor(Math.random() * 2 + 5);
   const sequence = insertMultipleSells(generateSplitAmount(total, parts), 3);
 
   for (const item of sequence) {
